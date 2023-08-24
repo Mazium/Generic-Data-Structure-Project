@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Week_1_PROJECTT.Week_1_Task
 {
-    public class LinkedListClass<T>
+    public class LinkedList<T>
     {
 
-      //  LinkedList<int> linkedLS = new LinkedList<int>();
-        //Our storage
+      
         public class Node
         {
             public T data;
@@ -22,9 +21,9 @@ namespace Week_1_PROJECTT.Week_1_Task
         }
 
         //Holding the data to be passed to the linkedlist
-        public Node head = default;
-        public Node tail = default;
-        private int count;
+        public Node head = null;
+        public Node tail = null;
+        private int count = 0;
 
         public int Count { get { return count; } }
 
@@ -33,25 +32,25 @@ namespace Week_1_PROJECTT.Week_1_Task
             Node node = new Node(className);
             if(head == null)
             {
-                head = node;
+                head = node;//The head becomes the head and the tail.
                 tail = node;
             }
             else
             {
-                tail.nextNode = node;
+                tail.nextNode = node;//If a node is found, then we add to the tail.
                 tail = node;
             }
-            count++;
+            count++;//It increases in size because a node has been added
             return count;
             
         }
-
+        
         public void RemoveData(T data)
         {
 
             if (head != null)
             {
-                Node currentNode = head;
+                Node currentNode = head; //meaning data or item was found
                 Node previousNode = null;
 
                 while (currentNode != null)
@@ -59,6 +58,7 @@ namespace Week_1_PROJECTT.Week_1_Task
                     if (currentNode.data.Equals(data))
                     {
                         if (previousNode == null)
+                            
                         {
                             //If the head to be removed is the head node
                             head = currentNode.nextNode;

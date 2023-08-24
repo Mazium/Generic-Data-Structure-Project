@@ -6,32 +6,32 @@ using System.Threading.Tasks;
 
 namespace Week_1_PROJECTT.Week_1_Task
 {
-    internal class MainClass
+    public class Main
     {
         public static void Main(string[] args)
         {
-           
+
             Console.WriteLine("LINKED LIST");
             Console.ResetColor();
             Console.WriteLine();
 
 
 
-            LinkedListClass<int> linkedLS = new LinkedListClass<int>();
-            linkedLS.AddData(14);
-            linkedLS.AddData(23);
-            linkedLS.AddData(53);
-            linkedLS.AddData(17);
-            linkedLS.AddData(80);
+            LinkedList<int> linkedLS = new LinkedList<int>();
+            //linkedLS.AddData(14);
+            //linkedLS.AddData(23);
+            //linkedLS.AddData(53);
+            //linkedLS.AddData(17);
+            //linkedLS.AddData(80);
 
 
 
 
-            Console.WriteLine(" List size: " + linkedLS.AddData(67));
+            //Console.WriteLine(" List size: " + linkedLS.AddData(67));
             Console.WriteLine(" List size: " + linkedLS.AddData(21));
             Console.WriteLine();
-           // Console.WriteLine(" Removed: " + linkedLS.RemoveData(2));
-          //  Console.WriteLine(" Removed: " + linkedLS.RemoveData(59));
+            // Console.WriteLine(" Removed: " + linkedLS.RemoveData(2));
+            //  Console.WriteLine(" Removed: " + linkedLS.RemoveData(59));
             Console.WriteLine();
             Console.WriteLine(" Check: " + linkedLS.Contains(5));
             Console.WriteLine(" Check: " + linkedLS.Contains(10));
@@ -50,7 +50,7 @@ namespace Week_1_PROJECTT.Week_1_Task
 
 
 
-            StackClass<int> myStack = new StackClass <int>();
+            Stack<int> myStack = new Stack<int>();
 
 
 
@@ -69,11 +69,11 @@ namespace Week_1_PROJECTT.Week_1_Task
             Console.WriteLine();
             Console.WriteLine(" Stack size " + myStack.Size());
             Console.WriteLine();
-            Console.WriteLine(" Return last item added to stack which is " + myStack.peek());
+            Console.WriteLine(" Display last item added to stack which is " + myStack.peek());
             Console.WriteLine();
             Console.WriteLine(" Remove last item added to stack which is " + myStack.Pop());
             Console.WriteLine();
-            Console.WriteLine(" Return last item added to stack which is " + myStack.peek());
+            Console.WriteLine(" Display last item added to stack which is " + myStack.peek());
 
 
 
@@ -84,16 +84,16 @@ namespace Week_1_PROJECTT.Week_1_Task
 
 
 
-            QueueClass<int> myQueue = new QueueClass<int>();
+            Queue<int> myQueue = new Queue<int>();
 
 
 
             Console.WriteLine(" Queue is empty " + myQueue.IsEmpty());
-            myQueue.Enqueue(90);
-            myQueue.Enqueue(22);
-            myQueue.Enqueue(51);
-            myQueue.Enqueue(131);
-            myQueue.Enqueue(8);
+            myQueue.Enqueue(10);
+            myQueue.Enqueue(20);
+            myQueue.Enqueue(30);
+            myQueue.Enqueue(40);
+            myQueue.Enqueue(50);
 
 
 
@@ -102,7 +102,7 @@ namespace Week_1_PROJECTT.Week_1_Task
             Console.WriteLine();
             Console.WriteLine(" Queue size " + myQueue.Size());
             Console.WriteLine();
-            Console.WriteLine(" Remove last item added to Queue which is " + myQueue.Dequeue());
+            Console.WriteLine(" Remove first item added to Queue which is " + myQueue.Dequeue());
             Console.WriteLine();
             Console.WriteLine(" Queue size " + myQueue.Size());
 
@@ -110,5 +110,5 @@ namespace Week_1_PROJECTT.Week_1_Task
 
         }
     }
-    }
+}    
 

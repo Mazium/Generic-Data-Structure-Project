@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Week_1_PROJECTT.Week_1_Task
 {
-    public class QueueClass<T>
+    public class Queue<T>
     {
         
         
-            private readonly LinkedListClass<T> linkedLS;
+            private readonly LinkedList<T> linkedLS;
 
 
 
-            public QueueClass()
+            public Queue()
             {
-                linkedLS = new LinkedListClass<T>();
+                linkedLS = new LinkedList<T>();
             }
             public bool IsEmpty()
             {
@@ -34,8 +34,12 @@ namespace Week_1_PROJECTT.Week_1_Task
 
             public T Dequeue()
             {
-                if (IsEmpty())
-                    Console.WriteLine("Stack is empty");
+            if (IsEmpty())
+            {
+                Console.WriteLine("Stack is empty");
+                return default;
+            }
+               
                 T item = linkedLS.head.data;
                 linkedLS.RemoveData(item);
                 return item;

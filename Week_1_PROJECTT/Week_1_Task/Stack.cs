@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Week_1_PROJECTT.Week_1_Task
 {
-    public class StackClass<T>
+    public class Stack<T>
     {
 
-        private readonly LinkedListClass<T> linkedLS;
+        private readonly LinkedList<T> linkedLS;
 
-        public StackClass()
+        public Stack()
         {
-            linkedLS = new LinkedListClass<T>();
+            linkedLS = new LinkedList<T>();
             
         }
 
@@ -30,19 +30,27 @@ namespace Week_1_PROJECTT.Week_1_Task
         public T Pop()
         {
             if (IsEmpty())
+            {
                 Console.WriteLine("Stack is empty");
+                return default;
 
+
+            }
             T item = linkedLS.tail.data;
-                linkedLS.RemoveData(item);
-                
-            
+            linkedLS.RemoveData(item);
             return item;
+
+
         }
 
         public T peek()
         {
             if (IsEmpty())
+            {
                 Console.WriteLine("Stack is empty");
+                return default;
+            }
+            
             T item = linkedLS.tail.data;
             return item;
         }
